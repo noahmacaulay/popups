@@ -9,9 +9,9 @@ position = Vector2i(100, 100)
 visible = true
 transient = false
 exclusive = false
+theme = ExtResource("1_htcks")
 dialog_hide_on_ok = false
 dialog_close_on_escape = false
-theme = ExtResource("1_htcks")
 script = ExtResource("1_6qy2x")
 
 [connection signal="canceled" from="." to="." method="_on_canceled_confirmed"]

@@ -6,7 +6,7 @@
 [node name="SpinnerBox" type="AcceptDialog"]
 title = "Hello"
 position = Vector2i(100, 100)
-size = Vector2i(247, 100)
+size = Vector2i(247, 118)
 visible = true
 transient = false
 exclusive = false
@@ -17,11 +17,19 @@ dialog_hide_on_ok = false
 dialog_close_on_escape = false
 script = ExtResource("1_ip0ff")
 
-[node name="SpinBox" type="SpinBox" parent="."]
+[node name="Container" type="VBoxContainer" parent="."]
 offset_left = 8.0
 offset_top = 8.0
 offset_right = 239.0
-offset_bottom = 51.0
+offset_bottom = 69.0
+
+[node name="Label" type="Label" parent="Container"]
+layout_mode = 2
+text = " "
+
+[node name="SpinBox" type="SpinBox" parent="Container"]
+layout_mode = 2
 
 [connection signal="canceled" from="." to="." method="_on_canceled_confirmed"]
 [connection signal="confirmed" from="." to="." method="_on_canceled_confirmed"]
+[connection signal="value_changed" from="Container/SpinBox" to="." method="_on_spin_box_value_changed"]
