@@ -7,6 +7,7 @@ title = "Hello"
 position = Vector2i(100, 100)
 visible = true
 transient = false
+exclusive = false
 dialog_hide_on_ok = false
 dialog_close_on_escape = false
 script = ExtResource("1_6qy2x")
