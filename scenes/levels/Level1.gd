@@ -18,6 +18,7 @@ func _process(delta):
 		var popup = AcceptDialog.new()
 		popup.position = Vector2(rng.randf_range(50, 450), rng.randf_range(50, 450))
 		popup.size = Vector2(rng.randf_range(100, 500), rng.randf_range(100, 300))
+		popup.transient = false
 		popup.visible = true
 		add_child(popup)
 		timer = 0
