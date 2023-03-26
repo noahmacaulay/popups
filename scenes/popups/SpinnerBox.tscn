@@ -1,16 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxnvlci3igjxu"]
+[gd_scene load_steps=3 format=3 uid="uid://bxnvlci3igjxu"]
 
 [ext_resource type="Script" path="res://scenes/popups/SpinnerBox.gd" id="1_ip0ff"]
+[ext_resource type="Theme" uid="uid://dtvtfsms3g4mu" path="res://resources/themes/theme.tres" id="1_r4hde"]
 
 [node name="SpinnerBox" type="AcceptDialog"]
 title = "Hello"
 position = Vector2i(100, 100)
+size = Vector2i(247, 100)
 visible = true
 transient = false
 exclusive = false
+borderless = true
+theme = ExtResource("1_r4hde")
+dialog_text = "Please select \"4\" to dismiss 😇"
 dialog_hide_on_ok = false
 dialog_close_on_escape = false
 script = ExtResource("1_ip0ff")
+
+[node name="SpinBox" type="SpinBox" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 239.0
+offset_bottom = 51.0
 
 [connection signal="canceled" from="." to="." method="_on_canceled_confirmed"]
 [connection signal="confirmed" from="." to="." method="_on_canceled_confirmed"]
