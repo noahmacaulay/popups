@@ -2,7 +2,9 @@ extends Node2D
 
 var rng = RandomNumberGenerator.new()
 var timer = 0
-var time_limit = 0.8 + rng.randfn(0.0, 0.3)
+var time_limit_mean = 1.2
+var time_limit_stdev = 0.3
+var time_limit = time_limit_mean + rng.randfn(0.0, time_limit_stdev)
 var resolution = Vector2(0, 0)
 var AlertBox = preload("res://scenes/popups/AlertBox.tscn")
 
@@ -19,4 +21,4 @@ func _process(delta):
 		var popup = AlertBox.instantiate()
 		add_child(popup)
 		timer = 0
-		time_limit = 0.8 + rng.randfn(0.0, 0.3)
+		time_limit = time_limit_mean + rng.randfn(0.0, time_limit_stdev)

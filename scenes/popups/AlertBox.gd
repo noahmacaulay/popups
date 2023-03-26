@@ -7,7 +7,8 @@ var title_list = ["Hello",
 	"Unusual Incident",
 	"2 FOR THE PRICE OF 1",
 	"You Just Won!!!",
-	"A TALKING PIG?!?!"	
+	"A TALKING PIG?!?!",
+	"Trouble with Popups?"	
 ]
 
 var dialog_list = ["Lizards rule the Earth? Learn about the true power behind world events and...",
@@ -16,7 +17,8 @@ var dialog_list = ["Lizards rule the Earth? Learn about the true power behind wo
 "THIS IS THE DEAL OF A LIFETIME. OUR INSTA-MASHER IS TOP-CLASS KITCHEN ACCESSORY AS VOTED BY KITCHEWORLD IN...",
 "The dread god Cthulhu ANNIHILATES woke students in live debate!! WAtch now at youtubewatch.viz.thai.co/#342...",
 "Will Arbuckle was a regular farmer. One day he came home for the harvest and everything changed when...",
-"YOU ARE THE ONE MILLIONTH VISITOR. CLICK HERE TO RECEIEVE YOUR EXCLUSIVE PRIZE"]
+"YOU ARE THE ONE MILLIONTH VISITOR. CLICK HERE TO RECEIEVE YOUR EXCLUSIVE PRIZE",
+"Are you inundated by popups? Our popup-blocker will take care of that for only $9.99. Buy now at..."]
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
