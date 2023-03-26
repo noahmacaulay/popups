@@ -11,6 +11,14 @@ default_font = ExtResource("3_kylxw")
 [node name="Level1" type="Node2D"]
 script = ExtResource("1_6vqor")
 
+[node name="Popup" type="Popup" parent="."]
+theme = ExtResource("3_ftqbf")
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(0.625926, 0.625926)
+texture = ExtResource("3_vqyvs")
+centered = false
+
 [node name="Counter" type="RichTextLabel" parent="."]
 offset_left = 2.0
 offset_top = 43.0
@@ -32,10 +40,22 @@ theme_override_colors/default_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 50
 text = "0%"
 
-[node name="Popup" type="Popup" parent="."]
-theme = ExtResource("3_ftqbf")
+[node name="GameOver" type="CanvasLayer" parent="."]
+visible = false
 
-[node name="Background" type="Sprite2D" parent="."]
-scale = Vector2(0.625926, 0.625926)
-texture = ExtResource("3_vqyvs")
-centered = false
+[node name="ColorRect" type="ColorRect" parent="GameOver"]
+offset_right = 1220.0
+offset_bottom = 691.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="GameOver"]
+anchors_preset = -1
+anchor_right = 0.051
+anchor_bottom = 0.087
+offset_left = 282.0
+offset_top = 180.0
+offset_right = 797.248
+offset_bottom = 427.624
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 60
+text = "YOUR COMPUTER CRASHED 
+:("
