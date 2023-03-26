@@ -1,8 +1,8 @@
 [gd_scene load_steps=2 format=3 uid="uid://bxnvlci3igjxu"]
 
-[ext_resource type="Script" path="res://scenes/popups/AlertBox.gd" id="1_c0640"]
+[ext_resource type="Script" path="res://scenes/popups/SpinnerBox.gd" id="1_ip0ff"]
 
-[node name="AlertBox" type="AcceptDialog"]
+[node name="SpinnerBox" type="AcceptDialog"]
 title = "Hello"
 position = Vector2i(100, 100)
 visible = true
@@ -10,7 +10,7 @@ transient = false
 exclusive = false
 dialog_hide_on_ok = false
 dialog_close_on_escape = false
-script = ExtResource("1_c0640")
+script = ExtResource("1_ip0ff")
 
 [connection signal="canceled" from="." to="." method="_on_canceled_confirmed"]
 [connection signal="confirmed" from="." to="." method="_on_canceled_confirmed"]
