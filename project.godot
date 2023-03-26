@@ -17,7 +17,6 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Dialogue="*res://scenes/autoloads/dialogue.tscn"
 Options="*res://scenes/autoloads/options.tscn"
 SaveLoad="*res://scenes/autoloads/save_load.tscn"
 
