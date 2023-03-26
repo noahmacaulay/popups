@@ -1,5 +1,6 @@
 extends AcceptDialog
 var rng = RandomNumberGenerator.new()
+signal closed
 
 var title_list = ["Hello",
 	"BUY NOW",
@@ -33,6 +34,8 @@ func _ready():
 func _on_canceled_confirmed():
 	self.hide()
 	self.queue_free()
+	emit_signal("closed")
+
 
 
 

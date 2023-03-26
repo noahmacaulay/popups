@@ -16,7 +16,7 @@ offset_top = 43.0
 offset_right = 125.0
 offset_bottom = 144.0
 theme = SubResource("Theme_73i8a")
-theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_colors/font_selected_color = Color(0.898039, 0, 0, 1)
 theme_override_fonts/normal_font = ExtResource("3_kylxw")
 theme_override_font_sizes/normal_font_size = 50
@@ -25,8 +25,9 @@ metadata/_edit_use_anchors_ = true
 
 [node name="CPU" type="RichTextLabel" parent="."]
 offset_top = 146.0
-offset_right = 88.0
+offset_right = 137.0
 offset_bottom = 215.0
+theme_override_colors/default_color = Color(1, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 50
 text = "0%"
 

@@ -7,6 +7,8 @@ var time_limit_stdev = 0.3
 var time_limit = time_limit_mean + rng.randfn(0.0, time_limit_stdev)
 var resolution = Vector2(0, 0)
 var AlertBox = preload("res://scenes/popups/AlertBox.tscn")
+var closed_window_count = 0
+var total_window_count = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -18,13 +20,18 @@ func _ready():
 func _process(delta):
 	timer += delta
 	if timer > time_limit:
+		total_window_count += 1
 		var popup = AlertBox.instantiate()
+		popup.connect("closed", self.popup_closed)
 		add_child(popup)
 		timer = 0
 		time_limit = time_limit_mean + rng.randfn(0.0, time_limit_stdev)
 		
-	var popups = self.get_child_count() - 2
+	var popups = total_window_count - closed_window_count
 	var percentage = popups * 2
 	$CPU.text = str(percentage)+"%"
+	$Counter.text = str(closed_window_count)
 	
 	
+func popup_closed():
+	closed_window_count += 1
