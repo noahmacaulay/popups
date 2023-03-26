@@ -5,7 +5,7 @@ signal change_scene(to: String)
 
 
 func _on_start_pressed() -> void:
-	pass
+	emit_signal("change_scene", "res://scenes/levels/Level1.tscn")
 
 
 func _on_load_pressed() -> void:
