@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bswlbknvt7rp1"]
+
+[ext_resource type="Script" path="res://scenes/popups/AlertBox.gd" id="1_6qy2x"]
+
+[node name="AlertBox" type="AcceptDialog"]
+title = "Hello"
+position = Vector2i(100, 100)
+visible = true
+script = ExtResource("1_6qy2x")
