@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://fehlle601a5q"]
+
+[ext_resource type="Theme" uid="uid://dtvtfsms3g4mu" path="res://resources/themes/theme.tres" id="1_4uify"]
+[ext_resource type="Script" path="res://scenes/popups/SliderBox.gd" id="1_slxir"]
+
+[node name="SliderBox" type="AcceptDialog"]
+title = "Hello"
+position = Vector2i(100, 100)
+size = Vector2i(215, 100)
+visible = true
+transient = false
+exclusive = false
+theme = ExtResource("1_4uify")
+ok_button_text = "Set Value"
+dialog_text = "Slide to Max to dismiss 😊"
+dialog_hide_on_ok = false
+dialog_close_on_escape = false
+script = ExtResource("1_slxir")
+
+[node name="HSlider" type="HSlider" parent="."]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 207.0
+offset_bottom = 51.0
+value = 50.0
+
+[connection signal="close_requested" from="." to="." method="_on_close_requested"]
+[connection signal="drag_ended" from="HSlider" to="." method="_on_h_slider_drag_ended"]
