@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://cmt3wdjn8hauw"]
+[gd_scene load_steps=6 format=3 uid="uid://cmt3wdjn8hauw"]
 
 [ext_resource type="Script" path="res://scenes/levels/Level1.gd" id="1_6vqor"]
 [ext_resource type="Theme" uid="uid://dtvtfsms3g4mu" path="res://resources/themes/theme.tres" id="3_ftqbf"]
 [ext_resource type="FontFile" uid="uid://dxi6h501i5am0" path="res://resources/fonts/Roboto/Roboto-Regular.ttf" id="3_kylxw"]
+[ext_resource type="Texture2D" uid="uid://cr1nwtj2tmx63" path="res://resources/sprites/hills.jpg" id="3_vqyvs"]
 
 [sub_resource type="Theme" id="Theme_73i8a"]
 default_font = ExtResource("3_kylxw")
@@ -33,3 +34,8 @@ text = "0%"
 
 [node name="Popup" type="Popup" parent="."]
 theme = ExtResource("3_ftqbf")
+
+[node name="Background" type="Sprite2D" parent="."]
+scale = Vector2(0.625926, 0.625926)
+texture = ExtResource("3_vqyvs")
+centered = false
