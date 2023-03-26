@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bswlbknvt7rp1"]
+[gd_scene load_steps=3 format=3 uid="uid://bswlbknvt7rp1"]
 
 [ext_resource type="Script" path="res://scenes/popups/AlertBox.gd" id="1_6qy2x"]
+[ext_resource type="Theme" uid="uid://dtvtfsms3g4mu" path="res://resources/themes/theme.tres" id="1_htcks"]
 
 [node name="AlertBox" type="AcceptDialog"]
 title = "Hello"
@@ -10,6 +11,7 @@ transient = false
 exclusive = false
 dialog_hide_on_ok = false
 dialog_close_on_escape = false
+theme = ExtResource("1_htcks")
 script = ExtResource("1_6qy2x")
 
 [connection signal="canceled" from="." to="." method="_on_canceled_confirmed"]
