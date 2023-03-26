@@ -22,3 +22,9 @@ func _process(delta):
 		add_child(popup)
 		timer = 0
 		time_limit = time_limit_mean + rng.randfn(0.0, time_limit_stdev)
+		
+	var popups = self.get_child_count() - 2
+	var percentage = popups * 2
+	$CPU.text = str(percentage)+"%"
+	
+	
