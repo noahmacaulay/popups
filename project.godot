@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Game Jam Template 4"
+config/name="Destroy All Popups"
+config/description="Dismiss as many popups as you can!"
 run/main_scene="res://scenes/main/main.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.png"
